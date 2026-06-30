@@ -10,10 +10,11 @@ window.__MODULES__.CONFIG = {
     dropdownTimeout: 500,
     operationTimeout: 30000,
 
+    // 分组配置：添加 type 字段（radio=单选，checkbox=多选）
     groups: [
-        { id: 'correctness', label: '属性值正确性判断', icon: '📋' },
-        { id: 'evidence', label: '证据来源', icon: '📷' },
-        { id: 'errorTypes', label: '错误问题类型', icon: '❌' }
+        { id: 'correctness', label: '属性值正确性判断', icon: '📋', type: 'radio' },
+        { id: 'evidence', label: '证据来源', icon: '📷', type: 'checkbox' },
+        { id: 'errorTypes', label: '错误问题类型', icon: '❌', type: 'radio' }
     ],
 
     keywords: {
