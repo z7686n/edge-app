@@ -67,18 +67,28 @@ window.__MODULES__.tagOps = (function() {
             return all;
         },
 
-        // 核心：根据动态类型切换标签
+        // ===== 核心：单选模式支持取消选中 =====
         toggleTag: function(gid, tag) {
             if (!selections[gid]) selections[gid] = new Set();
             var set = selections[gid];
             var isRadio = CONFIG.getGroupType(gid) === 'radio';
 
             if (isRadio) {
-                set.clear();
-                set.add(tag);
+                // 【修复】如果当前标签已选中，取消选中（清空该组）
+                if (set.has(tag)) {
+                    set.clear();
+                } else {
+                    // 否则清空并选中当前标签
+                    set.clear();
+                    set.add(tag);
+                }
             } else {
-                if (set.has(tag)) set.delete(tag);
-                else set.add(tag);
+                // 多选：正常切换
+                if (set.has(tag)) {
+                    set.delete(tag);
+                } else {
+                    set.add(tag);
+                }
             }
             saveSelections();
             return set;
