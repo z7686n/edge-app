@@ -143,6 +143,7 @@ window.__MODULES__.ui = (function() {
         groups.forEach(function(group) {
             var tags = getGroupTags(group.id);
             var selected = tagOps.getGroupSelections(group.id);
+            var typeLabel = group.type === 'radio' ? '（单选）' : '（多选）';
 
             var gDiv = document.createElement('div');
             gDiv.className = 'group-container';
@@ -161,9 +162,11 @@ window.__MODULES__.ui = (function() {
             });
 
             var left = document.createElement('span');
-            left.style.cssText = 'display:flex;align-items:center;gap:6px;';
-            left.innerHTML = '<span style="font-size:16px;">' + group.icon + '</span>' +
+            left.style.cssText = 'display:flex;align-items:center;gap:6px;flex-wrap:wrap;';
+            left.innerHTML =
+                '<span style="font-size:16px;">' + group.icon + '</span>' +
                 '<span style="font-size:13px;font-weight:bold;color:#eee;">' + group.label + '</span>' +
+                '<span style="font-size:10px;color:#888;background:rgba(255,255,255,0.06);padding:0 6px;border-radius:3px;">' + typeLabel + '</span>' +
                 '<span class="collapse-icon" style="font-size:11px;color:#666;">▼</span>';
 
             var right = document.createElement('span');
