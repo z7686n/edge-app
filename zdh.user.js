@@ -6,14 +6,14 @@
 // @author       Z
 // @match        *://*/*
 // @grant        none
-// @downloadURL  https://raw.githubusercontent.com/z7686n/app/main/zdh.user.js
-// @updateURL    https://raw.githubusercontent.com/z7686n/app/main/zdh.user.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/config.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/utils.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/template-manager.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/tag-ops.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/tree-select-ops.js
-// @require      https://raw.githubusercontent.com/z7686n/app/main/modules/ui-panel.js
+// @downloadURL  https://raw.githubusercontent.com/z7686n/edge-app/main/zdh.user.js
+// @updateURL    https://raw.githubusercontent.com/z7686n/edge-app/main/zdh.user.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/config.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/utils.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/template-manager.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/tag-ops.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/tree-select-ops.js
+// @require      https://raw.githubusercontent.com/z7686n/edge-app/main/modules/ui-panel.js
 // ==/UserScript==
 
 (function () {
